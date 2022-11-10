@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import HomeIcon from "@mui/icons-material/Home";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
@@ -18,6 +18,8 @@ import DoneIcon from "@mui/icons-material/Done";
 import HiveIcon from "@mui/icons-material/Hive";
 import WarehouseIcon from "@mui/icons-material/Warehouse";
 import DonutChart from "react-donut-chart";
+import IconNav from "./Components/IconNav";
+import FullNav from "./Components/FullNav";
 function App() {
   const [showNavBar, setShowNavBar] = useState(true);
   const toggleNavBar = () => {
@@ -27,114 +29,9 @@ function App() {
     <div className="body">
       <div className="App">
         {showNavBar === true ? (
-          <>
-            <div className="navbar display">
-              <div className="navbar__item">
-                <ImageIcon className="icon image image-single" />
-              </div>
-              <div className="navbar__item">
-                <HomeIcon className="icon single-icon icon-active" />
-              </div>
-              <div className="navbar__item">
-                <LocalOfferIcon className={"icon single-icon tag-icon"} />
-              </div>
-              <div className="navbar__item">
-                <ApartmentIcon className="icon single-icon apartment-icon" />
-              </div>
-              <div className="navbar__item">
-                <FormatListBulletedIcon className="icon single-icon list-icon" />
-              </div>
-              <div className="navbar__item">
-                <PersonIcon className="icon single-icon person-icon" />
-              </div>
-              <div className="navbar__item">
-                <DifferenceIcon className="icon single-icon duplicate-icon" />
-              </div>
-              <div className="navbar__item">
-                <BarChartIcon className="icon single-icon bar-icon" />
-              </div>
-              <div className="navbar__item">
-                <LocalOfferIcon className="icon single-icon tag2-icon" />
-              </div>
-              <div className="navbar__item">
-                <SettingsIcon className="icon single-icon setting-icon" />
-              </div>
-              <div className="navbar__item">
-                <PowerSettingsNewIcon className="icon single-icon power-icon" />
-              </div>
-            </div>
-          </>
+          <IconNav />
         ) : (
-          <>
-            <div className="navbar fulldisplay">
-              <div className="navbar__item">
-                <div className="flex-component image">
-                  <ImageIcon className="icon" />
-                  <p>LAUNDRY</p>
-                </div>
-              </div>
-              <div className="navbar__item active">
-                <div className="flex-component">
-                  <HomeIcon className="icon" />
-                  <p>Dashboard</p>
-                </div>
-              </div>
-              <div className="navbar__item temp-active">
-                <div className="flex-component">
-                  <LocalOfferIcon className="icon tag-icon" />
-                  <p>Pos</p>
-                </div>
-              </div>
-              <div className="navbar__item temp-active">
-                <div className="flex-component">
-                  <ApartmentIcon className="icon apartment-icon" />
-                  <p>Orders</p>
-                </div>
-              </div>
-              <div className="navbar__item temp-active">
-                <div className="flex-component">
-                  <FormatListBulletedIcon className="icon list-icon" />
-                  <p>Order Status Screen</p>
-                </div>
-              </div>
-              <div className="navbar__item temp-active">
-                <div className="flex-component">
-                  <PersonIcon className="icon person-icon" />
-                  <p>Customers</p>
-                </div>
-              </div>
-              <div className="navbar__item temp-active">
-                <div className="flex-component">
-                  <DifferenceIcon className="icon duplicate-icon" />
-                  <p>Expenses</p>
-                </div>
-              </div>
-              <div className="navbar__item temp-active">
-                <div className="flex-component">
-                  <BarChartIcon className="icon bar-icon" />
-                  <p>Reports</p>
-                </div>
-              </div>
-              <div className="navbar__item temp-active">
-                <div className="flex-component">
-                  <LocalOfferIcon className="icon tag2-icon" />
-                  <p>Services</p>
-                </div>
-              </div>
-              <div className="navbar__item temp-active">
-                <div className="flex-component">
-                  <SettingsIcon className="icon setting-icon" />
-                  <p>Tools</p>
-                </div>
-              </div>
-              <div className="navbar__item temp-active">
-                <div className="flex-component">
-                  <PowerSettingsNewIcon className="icon power-icon" />
-                  <p>Logout</p>
-                </div>
-              </div>
-            </div>
-          </>
+          <FullNav />
         )}
 
         <div
