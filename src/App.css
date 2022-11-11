@@ -364,7 +364,7 @@
 }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 650px) {
   .navbar {
     display: none;
   }
